@@ -171,16 +171,36 @@ header button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: linear-gradient(
-			to bottom,
-			#181c2f 0%,
-			rgba(24, 28, 47, 0) 100%
-		),
-		url("./poster.jpg");
 	background-position: left top, left top;
 	background-size: cover;
 	border-radius: 8px;
 	cursor: pointer;
+}
+
+.video-area .video-bg picture {
+	display: contents;
+}
+
+@media screen and (min-width: 577px) {
+	.video-area .video-bg {
+		background-image: linear-gradient(
+				to bottom,
+				#181c2f 0%,
+				rgba(24, 28, 47, 0) 100%
+			),
+			url("./poster.jpg");
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.video-area .video-bg {
+		background-image: linear-gradient(
+				to bottom,
+				#181c2f 0%,
+				rgba(24, 28, 47, 0) 100%
+			),
+			url("./poster-mobile.jpg");
+	}
 }
 
 .video-area .poster {
